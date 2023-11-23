@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41269ED92B0CD28B0091CDAA /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41269ED72B0CD28B0091CDAA /* BasketViewController.swift */; };
+		41269EDA2B0CD28B0091CDAA /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41269ED82B0CD28B0091CDAA /* BasketViewController.xib */; };
+		41269EDC2B0CD29D0091CDAA /* BasketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41269EDB2B0CD29D0091CDAA /* BasketManager.swift */; };
+		41269EE02B0CEAC10091CDAA /* DetailCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41269EDE2B0CEAC10091CDAA /* DetailCatalogViewController.swift */; };
+		41269EE12B0CEAC10091CDAA /* DetailCatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41269EDF2B0CEAC10091CDAA /* DetailCatalogViewController.xib */; };
 		414C3D5F2AFA14E50045A809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C3D5E2AFA14E50045A809 /* AppDelegate.swift */; };
 		414C3D612AFA14E50045A809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C3D602AFA14E50045A809 /* SceneDelegate.swift */; };
 		414C3D632AFA14E50045A809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C3D622AFA14E50045A809 /* ViewController.swift */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41269ED72B0CD28B0091CDAA /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		41269ED82B0CD28B0091CDAA /* BasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewController.xib; sourceTree = "<group>"; };
+		41269EDB2B0CD29D0091CDAA /* BasketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketManager.swift; sourceTree = "<group>"; };
+		41269EDE2B0CEAC10091CDAA /* DetailCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogViewController.swift; sourceTree = "<group>"; };
+		41269EDF2B0CEAC10091CDAA /* DetailCatalogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCatalogViewController.xib; sourceTree = "<group>"; };
 		414C3D5B2AFA14E50045A809 /* CatalogFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalogFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414C3D5E2AFA14E50045A809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414C3D602AFA14E50045A809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,10 +61,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41269ED62B0CD2450091CDAA /* BasketProduct */ = {
+			isa = PBXGroup;
+			children = (
+				41269ED72B0CD28B0091CDAA /* BasketViewController.swift */,
+				41269EDB2B0CD29D0091CDAA /* BasketManager.swift */,
+				41269ED82B0CD28B0091CDAA /* BasketViewController.xib */,
+			);
+			path = BasketProduct;
+			sourceTree = "<group>";
+		};
+		41269EDD2B0CE7FA0091CDAA /* DetailCatalogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41269EDE2B0CEAC10091CDAA /* DetailCatalogViewController.swift */,
+				41269EDF2B0CEAC10091CDAA /* DetailCatalogViewController.xib */,
+			);
+			path = DetailCatalogViewController;
+			sourceTree = "<group>";
+		};
 		414C3D522AFA14E50045A809 = {
 			isa = PBXGroup;
 			children = (
 				419B79432AFA214000F063B9 /* CoreData */,
+				41269ED62B0CD2450091CDAA /* BasketProduct */,
 				414C3D5D2AFA14E50045A809 /* CatalogFinder */,
 				414C3D5C2AFA14E50045A809 /* Products */,
 			);
@@ -71,6 +101,7 @@
 		414C3D5D2AFA14E50045A809 /* CatalogFinder */ = {
 			isa = PBXGroup;
 			children = (
+				41269EDD2B0CE7FA0091CDAA /* DetailCatalogViewController */,
 				414C3D7E2AFA1AB40045A809 /* CatalogViewCell */,
 				414C3D792AFA160B0045A809 /* Home */,
 				414C3D5E2AFA14E50045A809 /* AppDelegate.swift */,
@@ -172,8 +203,10 @@
 			files = (
 				414C3D7D2AFA1A960045A809 /* CatalogTableViewCell.xib in Resources */,
 				414C3D782AFA15F90045A809 /* CatalogViewController.xib in Resources */,
+				41269EE12B0CEAC10091CDAA /* DetailCatalogViewController.xib in Resources */,
 				414C3D6E2AFA14E60045A809 /* LaunchScreen.storyboard in Resources */,
 				414C3D6B2AFA14E60045A809 /* Assets.xcassets in Resources */,
+				41269EDA2B0CD28B0091CDAA /* BasketViewController.xib in Resources */,
 				414C3D662AFA14E50045A809 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41269ED92B0CD28B0091CDAA /* BasketViewController.swift in Sources */,
+				41269EDC2B0CD29D0091CDAA /* BasketManager.swift in Sources */,
 				414C3D772AFA15F90045A809 /* CatalogViewController.swift in Sources */,
 				414C3D632AFA14E50045A809 /* ViewController.swift in Sources */,
+				41269EE02B0CEAC10091CDAA /* DetailCatalogViewController.swift in Sources */,
 				414C3D692AFA14E50045A809 /* CatalogFinder.xcdatamodeld in Sources */,
 				419B79412AFA212D00F063B9 /* Product+CoreDataClass.swift in Sources */,
 				414C3D7C2AFA1A960045A809 /* CatalogTableViewCell.swift in Sources */,

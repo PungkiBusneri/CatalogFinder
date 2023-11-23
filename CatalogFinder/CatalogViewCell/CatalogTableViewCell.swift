@@ -16,6 +16,7 @@ class CatalogTableViewCell: UITableViewCell {
     @IBOutlet var imageViewProduct: UIImageView!
     @IBOutlet var labelNameProduct: UILabel!
     @IBOutlet var addToFavorit: UIButton!
+    @IBOutlet var priceLabel: UILabel!
     
     weak var delegate: CatalogTableViewCellDelegate?
     
@@ -30,5 +31,8 @@ class CatalogTableViewCell: UITableViewCell {
     
     @IBAction func addTapped(_ sender: Any) {
         delegate?.addToFavoriteButtonTapped(cell: self)
+    }
+    func configure(with product: Product) {
+        labelNameProduct.text = product.productName
     }
 }
