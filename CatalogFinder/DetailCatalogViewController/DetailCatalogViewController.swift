@@ -12,7 +12,8 @@ class DetailCatalogViewController: UIViewController, UIImagePickerControllerDele
     var product: Product?
     var selectedImage: UIImage?
     var isInBasket: Bool?
-    
+    var isBasketButtonPressed = false
+
     @IBOutlet var backButton: UIButton!
     @IBOutlet var basketProduct: UIButton!
     @IBOutlet var editDetailproduct: UIButton!
@@ -33,18 +34,57 @@ class DetailCatalogViewController: UIViewController, UIImagePickerControllerDele
 //            productPrice.text = "Price: \(product.productPrice) IDR"
             productStock.text = "Stock: \(product.productStock) Pcs"
             productDesc.text = product.productDesc
+            
+            hidesBottomBarWhenPushed = true
+            
+            basketProduct.tintColor = UIColor(named: "NewPink")
         }
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        print("View will appear - isBasketButtonPressed: \(isBasketButtonPressed)")
+        self.tabBarController?.tabBar.isHidden = !isBasketButtonPressed
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("View will disappear - isBasketButtonPressed: \(isBasketButtonPressed)")
+        
+        // Menampilkan kembali tab bar saat kembali ke halaman utama
+        self.tabBarController?.tabBar.isHidden = false
+        hidesBottomBarWhenPushed = false
+        if isBasketButtonPressed {
+                self.tabBarController?.tabBar.isHidden = false
+                isBasketButtonPressed = false
+            }
+    }
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func basketProduct(_ sender: Any) {
+        
+        hidesBottomBarWhenPushed = true
+        
+//        Mengatur animasi navigasi
+        if let tabBar = self.tabBarController?.tabBar {
+            UIView.transition(with: tabBar, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                tabBar.isHidden = true
+            })
+            
+        }
+        
         showShppingChart()
     }
+    
     @IBAction func editDetailProductTapped(_ sender: Any) {
         showEditAlert()
     }
+    
     @IBAction func addToBasketProductTapped(_ sender: Any) {
         print("tombol di tekan")
         guard let product = product, product.productStock > 0 else {

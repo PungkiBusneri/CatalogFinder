@@ -38,8 +38,16 @@ class BasketViewController: UIViewController {
         tableview.delegate = self
         tableview.register(UINib(nibName: "CatalogTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         BasketManager.shared.loadShoppingChart()
+        
+        self.tabBarController?.tabBar.isHidden = true
     }
-    
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Menampilkan kembali tab bar saat kembali ke halaman utama
+        self.tabBarController?.tabBar.isHidden = false
+    }
     func updateUI(with product: Product) {
         
     }
@@ -53,16 +61,17 @@ class BasketViewController: UIViewController {
         }
         
         let removedProduct = shoppingChart.remove(at: index)
-        product.productStock += 1
         updateUI(with: product)
+        product.productStock += 1
         product.isInBasket = false
+        
         BasketManager.shared.saveShoppingChart()
         delegate?.productRemovedFromBasket(product: removedProduct)
         
         print("Removing Product From Shopping Chart: \(product.productName)")
     }
-    
 }
+
 extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -28,8 +28,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRn-rk-pkH">
-                    <rect key="frame" x="10" y="39.333333333333329" width="78" height="34.333333333333329"/>
-                    <color key="tintColor" red="0.76859849690000004" green="0.22354086409999999" blue="0.4010410452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="10" y="37" width="78" height="34.333333333333343"/>
+                    <color key="tintColor" red="0.76862745098039209" green="0.23137254901960785" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back"/>
                     <connections>
@@ -37,43 +37,52 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgC-Sv-6OY">
-                    <rect key="frame" x="329.66666666666669" y="39.333333333333329" width="53.333333333333314" height="34.333333333333329"/>
+                    <rect key="frame" x="329.66666666666669" y="37" width="53.333333333333314" height="34.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                     <connections>
                         <action selector="editDetailProductTapped:" destination="-1" eventType="touchUpInside" id="w1I-fg-NlE"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcw-ha-ghf">
-                    <rect key="frame" x="269" y="39" width="54" height="35"/>
-                    <color key="tintColor" red="0.76859849690000004" green="0.22354086409999999" blue="0.4010410452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="basket" catalog="system"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcw-ha-ghf">
+                    <rect key="frame" x="283" y="39" width="40" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="0BM-yp-t4S"/>
+                        <constraint firstAttribute="height" constant="30" id="edY-Sf-3rD"/>
+                    </constraints>
+                    <color key="tintColor" red="0.66666668650000005" green="0.011962179179999999" blue="0.1106315987" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="buy chart">
+                        <color key="titleColor" red="0.66666668650000005" green="0.011962179179999999" blue="0.1106315987" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="titleShadowColor" red="0.66666668650000005" green="0.011962179179999999" blue="0.1106315987" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                    </state>
                     <connections>
                         <action selector="basketProduct:" destination="-1" eventType="touchUpInside" id="rM3-hX-yme"/>
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XdT-c8-OIF">
-                    <rect key="frame" x="0.0" y="92.666666666666686" width="393" height="230"/>
-                    <color key="backgroundColor" red="0.76859849690000004" green="0.22354086409999999" blue="0.4010410452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="0.0" y="90.333333333333314" width="393" height="230"/>
+                    <color key="backgroundColor" red="0.76862745098039209" green="0.23137254901960785" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="230" id="QBS-23-bfa"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEw-rN-Zv8">
-                    <rect key="frame" x="0.0" y="332.66666666666669" width="383" height="21"/>
+                    <rect key="frame" x="0.0" y="330.33333333333331" width="383" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Stock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nB-gg-HcG">
-                    <rect key="frame" x="80" y="398.66666666666669" width="233" height="21"/>
+                    <rect key="frame" x="80" y="396.33333333333331" width="233" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-Hg-3eF">
-                    <rect key="frame" x="0.0" y="427.66666666666669" width="393" height="100.00000000000006"/>
+                    <rect key="frame" x="0.0" y="425.33333333333331" width="393" height="99.999999999999943"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="BlJ-T2-eo5"/>
                     </constraints>
@@ -88,14 +97,14 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Tambahkan Ke Keranjang">
-                        <color key="baseBackgroundColor" red="0.76859849690000004" green="0.22354086409999999" blue="0.4010410452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" red="0.76862745098039209" green="0.22352941176470587" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="addToBasketProductTapped:" destination="-1" eventType="touchUpInside" id="XmX-om-SOH"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-3D-SUI">
-                    <rect key="frame" x="10" y="363.66666666666669" width="373" height="25"/>
+                    <rect key="frame" x="10" y="361.33333333333331" width="373" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="a3g-hf-Iro"/>
                     </constraints>
@@ -133,11 +142,11 @@
                 <constraint firstItem="WRn-rk-pkH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="xkz-M4-S60"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="139.69465648854961" y="-30.281690140845072"/>
+            <point key="canvasLocation" x="-282" y="-273"/>
         </view>
     </objects>
     <resources>
-        <image name="basket" catalog="system" width="128" height="108"/>
+        <image name="buy chart" width="48" height="48"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

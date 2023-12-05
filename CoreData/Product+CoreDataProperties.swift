@@ -24,7 +24,7 @@ extension Product {
     @NSManaged public var productImage: Data?
     @NSManaged public var isInBasket: Bool
     
-//    MARK: - Mengatur Mata uang tampilan Cell Table
+//   MARK: - Mengatur Mata uang tampilan Cell Table
     var formattedPrice: String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency

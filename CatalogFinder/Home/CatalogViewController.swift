@@ -45,13 +45,18 @@ class CatalogViewController: UIViewController, UITextFieldDelegate, BasketViewCo
         
         let nib = UINib(nibName: "CatalogTableViewCell", bundle: nil)
         catalogList.register(nib, forCellReuseIdentifier: "CatalogTableViewCell")
-        navigationController?.setNavigationBarHidden(true, animated: false)
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
+
         backButton.isHidden = true
         
         //        MARK: - For Button Shopping Chart Product
         let shoppingChartButton = UIButton(type: .system)
-        shoppingChartButton.setImage(UIImage(systemName: "basket"), for: .normal)
+        if let customImage = UIImage(named: "buy chart") {
+            shoppingChartButton.setImage(customImage, for: .normal)
+        } else {
+            print("Gambar tidak ditemukan di asset")
+        }
         shoppingChartButton.addTarget(self, action: #selector(buttonShoppingChart), for: .touchUpInside)
         view.addSubview(shoppingChartButton)
         
@@ -62,7 +67,7 @@ class CatalogViewController: UIViewController, UITextFieldDelegate, BasketViewCo
         shoppingChartButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 244).isActive = true
         shoppingChartButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
         shoppingChartButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        shoppingChartButton.tintColor = .red
+        shoppingChartButton.tintColor = UIColor(named: "Pink2")
     }
     
     @objc func buttonShoppingChart() {
@@ -227,7 +232,7 @@ class CatalogViewController: UIViewController, UITextFieldDelegate, BasketViewCo
             
             if product.isFavorite {
                 cell.addToFavorit.setImage(UIImage(named: "heart.fill"), for: .normal)
-                cell.addToFavorit.tintColor = UIColor.systemRed
+                cell.addToFavorit.tintColor = UIColor(named: "PinkColor")
             }
             return cell
         }
@@ -312,7 +317,7 @@ extension CatalogViewController: CatalogTableViewCellDelegate {
                 
                 if product.isFavorite {
                     cell.addToFavorit.setImage(UIImage(named: "heart.fill"), for: .normal)
-                    cell.addToFavorit.tintColor = UIColor.systemRed
+                    cell.addToFavorit.tintColor = UIColor(named: "PinkColor")
                 } else {
                     
                     cell.addToFavorit.setImage(UIImage(named: "heart"), for: .normal)

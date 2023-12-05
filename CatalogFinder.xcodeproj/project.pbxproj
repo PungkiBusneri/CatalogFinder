@@ -25,6 +25,11 @@
 		414C3D7D2AFA1A960045A809 /* CatalogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414C3D7B2AFA1A960045A809 /* CatalogTableViewCell.xib */; };
 		419B79412AFA212D00F063B9 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B793F2AFA212D00F063B9 /* Product+CoreDataClass.swift */; };
 		419B79422AFA212D00F063B9 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B79402AFA212D00F063B9 /* Product+CoreDataProperties.swift */; };
+		41A62B842B1C31CA00327291 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A62B822B1C31CA00327291 /* ProfilViewController.swift */; };
+		41A62B852B1C31CA00327291 /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A62B832B1C31CA00327291 /* ProfilViewController.xib */; };
+		41A62B8B2B1C32DC00327291 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A62B8A2B1C32DC00327291 /* TabBarController.swift */; };
+		41A62B8E2B1C34D600327291 /* RecomandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A62B8C2B1C34D600327291 /* RecomandedViewController.swift */; };
+		41A62B8F2B1C34D600327291 /* RecomandedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A62B8D2B1C34D600327291 /* RecomandedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		414C3D7B2AFA1A960045A809 /* CatalogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogTableViewCell.xib; sourceTree = "<group>"; };
 		419B793F2AFA212D00F063B9 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		419B79402AFA212D00F063B9 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A62B822B1C31CA00327291 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		41A62B832B1C31CA00327291 /* ProfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
+		41A62B8A2B1C32DC00327291 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		41A62B8C2B1C34D600327291 /* RecomandedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandedViewController.swift; sourceTree = "<group>"; };
+		41A62B8D2B1C34D600327291 /* RecomandedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomandedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				419B79432AFA214000F063B9 /* CoreData */,
+				41A62B7D2B1C314B00327291 /* TabBar */,
 				41269ED62B0CD2450091CDAA /* BasketProduct */,
 				414C3D5D2AFA14E50045A809 /* CatalogFinder */,
 				414C3D5C2AFA14E50045A809 /* Products */,
@@ -141,6 +152,18 @@
 				419B793F2AFA212D00F063B9 /* Product+CoreDataClass.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		41A62B7D2B1C314B00327291 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				41A62B8A2B1C32DC00327291 /* TabBarController.swift */,
+				41A62B8C2B1C34D600327291 /* RecomandedViewController.swift */,
+				41A62B8D2B1C34D600327291 /* RecomandedViewController.xib */,
+				41A62B822B1C31CA00327291 /* ProfilViewController.swift */,
+				41A62B832B1C31CA00327291 /* ProfilViewController.xib */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +227,9 @@
 				414C3D7D2AFA1A960045A809 /* CatalogTableViewCell.xib in Resources */,
 				414C3D782AFA15F90045A809 /* CatalogViewController.xib in Resources */,
 				41269EE12B0CEAC10091CDAA /* DetailCatalogViewController.xib in Resources */,
+				41A62B8F2B1C34D600327291 /* RecomandedViewController.xib in Resources */,
 				414C3D6E2AFA14E60045A809 /* LaunchScreen.storyboard in Resources */,
+				41A62B852B1C31CA00327291 /* ProfilViewController.xib in Resources */,
 				414C3D6B2AFA14E60045A809 /* Assets.xcassets in Resources */,
 				41269EDA2B0CD28B0091CDAA /* BasketViewController.xib in Resources */,
 				414C3D662AFA14E50045A809 /* Main.storyboard in Resources */,
@@ -219,15 +244,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				41269ED92B0CD28B0091CDAA /* BasketViewController.swift in Sources */,
+				41A62B842B1C31CA00327291 /* ProfilViewController.swift in Sources */,
 				41269EDC2B0CD29D0091CDAA /* BasketManager.swift in Sources */,
 				414C3D772AFA15F90045A809 /* CatalogViewController.swift in Sources */,
 				414C3D632AFA14E50045A809 /* ViewController.swift in Sources */,
 				41269EE02B0CEAC10091CDAA /* DetailCatalogViewController.swift in Sources */,
+				41A62B8E2B1C34D600327291 /* RecomandedViewController.swift in Sources */,
 				414C3D692AFA14E50045A809 /* CatalogFinder.xcdatamodeld in Sources */,
 				419B79412AFA212D00F063B9 /* Product+CoreDataClass.swift in Sources */,
 				414C3D7C2AFA1A960045A809 /* CatalogTableViewCell.swift in Sources */,
 				414C3D5F2AFA14E50045A809 /* AppDelegate.swift in Sources */,
 				419B79422AFA212D00F063B9 /* Product+CoreDataProperties.swift in Sources */,
+				41A62B8B2B1C32DC00327291 /* TabBarController.swift in Sources */,
 				414C3D612AFA14E50045A809 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
